@@ -1,0 +1,22 @@
+version: '3.7'
+
+services:
+  postgres:
+    image: postgres:9.6.1
+    restart: always
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=mysecretpassword
+      - POSTGRES_DB=restaurant
+    ports:
+      - '5432:5432'
+    volumes:
+      - ./schema.sql:/docker-entrypoint-initdb.d/create_tables.sql
+
+  restaurant-app:
+    container_name: restaurant-app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - '80:8080'
