@@ -12,16 +12,19 @@ import java.time.LocalDateTime;
 
 @RestController
 @RequestMapping(value="reservation/")
-public class ReservationController {
+public class ReservationController implements ReservationApi {
     @Autowired
     private ReservationService reservationService;
 
+    @Override
     @GetMapping(value="alive")
     public String alive(){
         return LocalDateTime.now().toString();
     }
 
-    @PostMapping(value="create/")
+    @Override
+    @PostMapping(value="create")
+    @CrossOrigin
     public ReservationResponse reserve(@RequestBody Reservation reservation){
         Long reservationId = this.reservationService.createReservation(reservation.getRestaurantId(),
                 reservation.getNumOfPeople(), reservation.getReservationDateTime(), reservation.getCustomerName(),
@@ -29,7 +32,8 @@ public class ReservationController {
         return new ReservationResponse(reservationId.toString());
     }
 
-    @PostMapping(value="cancel/")
+    @Override
+    @PostMapping(value="cancel")
     public ReservationCancelResponse cancel(@RequestBody ReservationCancel reservationCancel){
         String msg = this.reservationService.cancelReservation(reservationCancel.getReservationId()
                 , reservationCancel.getPhoneNumber())?"success":"fail";

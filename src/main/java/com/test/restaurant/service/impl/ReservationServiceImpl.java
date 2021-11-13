@@ -5,12 +5,13 @@ import com.test.restaurant.dao.domain.Restaurant;
 import com.test.restaurant.dao.repository.ReservationRepository;
 import com.test.restaurant.dao.repository.RestaurantRepository;
 import com.test.restaurant.service.ReservationService;
+import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.time.LocalDateTime;
 import java.util.Optional;
-
+@AllArgsConstructor
 @Component
 public class ReservationServiceImpl implements ReservationService {
     @Autowired

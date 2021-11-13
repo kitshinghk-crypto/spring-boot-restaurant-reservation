@@ -31,7 +31,6 @@ public class Reservation {
 
     public Reservation(int numOfPeople, LocalDateTime reservationDateTime, String customerName,
                        String phoneNumber, LocalDateTime createDateTime){
-        //this.restaurantId = restaurantId;
         this.numOfPeople = numOfPeople;
         this.reservationDatetime = reservationDateTime;
         this.customerName = customerName;
