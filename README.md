@@ -15,7 +15,11 @@ The persistance layer used Postgres as database. The libraries used in this proj
 - Lombok
 - Junit
 
-The application is built and installed using Maven and Docker.
+The application is built and installed using Maven and Docker. Build the project by 
+```
+git clone https://github.com/kitshinghk-crypto/spring-boot-restaurant-reservation.git
+docker-compose up
+```
 
 ## Screenshot
 ![Swagger-UI index page](screenshot_1.png)
