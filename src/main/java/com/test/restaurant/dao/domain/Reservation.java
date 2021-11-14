@@ -19,10 +19,10 @@ public class Reservation {
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "reservation_sequence")
     private Long reservationId;
     private int numOfPeople;
-    private LocalDateTime reservationDatetime;
+    private LocalDateTime reservationDateTime;
     private String customerName;
     private String phoneNumber;
-    private LocalDateTime createDatetime;
+    private LocalDateTime createDateTime;
 
     @ManyToOne
     @JoinColumn(name="restaurantId")
@@ -32,9 +32,9 @@ public class Reservation {
     public Reservation(int numOfPeople, LocalDateTime reservationDateTime, String customerName,
                        String phoneNumber, LocalDateTime createDateTime){
         this.numOfPeople = numOfPeople;
-        this.reservationDatetime = reservationDateTime;
+        this.reservationDateTime = reservationDateTime;
         this.customerName = customerName;
         this.phoneNumber = phoneNumber;
-        this.createDatetime = createDateTime;
+        this.createDateTime = createDateTime;
     }
 }
