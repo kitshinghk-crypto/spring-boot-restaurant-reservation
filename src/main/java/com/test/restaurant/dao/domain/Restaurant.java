@@ -14,7 +14,7 @@ import java.util.Set;
         attributeNodes = {@NamedAttributeNode("reservation")}
 )
 @Entity
-@Table(name="RESTAURANT")
+@Table(name="restaurant")
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
