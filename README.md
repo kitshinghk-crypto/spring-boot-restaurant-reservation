@@ -1,6 +1,6 @@
 # spring-boot-restaurant-reservation
 ## Summary
-A restaurant reservation application, which serves as a Spring Boot demo. The system consists of 2 major API for 2 resources:
+A backend REST API applicaiton for restaurant reservation platform developed using Spring Boot. The system consists of 2 major API for 2 resources:
 1. Restaurant
    - List restaurant information
    - List all reservations of a specific restaurant
