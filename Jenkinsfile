@@ -20,5 +20,11 @@ pipeline {
                 sh 'mvn clean install'
             }
         }
+        stage('Deploy'){
+            echo 'Start deploying ...' 
+            steps{
+                sh 'docker-compose up'
+            }
+        }
     }
 }
