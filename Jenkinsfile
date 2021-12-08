@@ -8,6 +8,7 @@ pipeline {
         stage ('Initialize') {
             steps {
                 sh '''
+                    echo "JAVA_HOME = ${env.JAVA_HOME}"
                     echo "JAVA_HOME = ${JAVA_HOME}"
                     echo "PATH = ${PATH}"
                     echo "M2_HOME = ${M2_HOME}"
