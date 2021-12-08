@@ -16,8 +16,9 @@ pipeline {
         }
         stage('Build') { 
             steps { 
-               echo 'Start building ...' 
+                echo 'Start building ...' 
                 sh 'export JAVA_HOME=/opt/java/openjdk/bin'
+                sh 'echo $JAVA_HOME'
                 sh 'mvn clean install'
             }
         }
