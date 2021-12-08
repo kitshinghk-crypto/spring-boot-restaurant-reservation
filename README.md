@@ -22,4 +22,4 @@ docker-compose up
 ```
 
 ## Screenshot
-![Swagger-UI index page](screenshot_1.png)
+![Swagger-UI index page](screenshot_1.png) 
